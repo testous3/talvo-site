@@ -2,7 +2,7 @@
   "ios": {
     "minVersion": "1.0.0",
     "latestVersion": "1.0.8",
-    "forceUpdate": true,
+    "forceUpdate": false,
     "storeUrl": "https://apps.apple.com/app/id0000000000"
   },
   "android": {
