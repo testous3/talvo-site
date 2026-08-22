@@ -102,6 +102,32 @@
     });
   }
 
+  // Language switcher dropdown.
+  var langSwitcher = document.querySelector('.lang-switcher');
+  var langButton = document.querySelector('.lang-current');
+  if (langSwitcher && langButton) {
+    langButton.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = langSwitcher.classList.toggle('is-open');
+      langButton.setAttribute('aria-expanded', String(isOpen));
+    });
+    document.addEventListener('click', function (e) {
+      if (!langSwitcher.contains(e.target)) {
+        langSwitcher.classList.remove('is-open');
+        langButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+    langSwitcher.querySelectorAll('.lang-menu a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        try {
+          localStorage.setItem('talvo-lang-choice', '1');
+        } catch (err) {
+          /* localStorage unavailable (private mode, etc.) - not critical, the click still navigates. */
+        }
+      });
+    });
+  }
+
   // Subtle parallax on the hero visual, following pointer movement on desktop.
   var heroVisual = document.querySelector('.hero-visual');
   if (heroVisual && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {

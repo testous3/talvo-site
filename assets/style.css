@@ -111,6 +111,67 @@ a {
   color: var(--ink);
 }
 
+/* Language switcher */
+.lang-switcher {
+  position: relative;
+  margin-left: 6px;
+}
+
+.lang-current {
+  font: inherit;
+  font-weight: 700;
+  color: var(--subtitle);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.lang-current:hover {
+  color: var(--accent-dark);
+  background: rgba(47, 174, 96, 0.1);
+}
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 140px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(24, 20, 15, 0.12);
+  padding: 6px;
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lang-switcher.is-open .lang-menu {
+  display: flex;
+}
+
+.lang-menu a {
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 9px;
+  white-space: nowrap;
+}
+
+.lang-menu a:hover {
+  background: rgba(47, 174, 96, 0.1);
+}
+
+.lang-menu a.active {
+  color: var(--accent-dark);
+  background: rgba(47, 174, 96, 0.12);
+}
+
 /* Hamburger toggle - hidden on desktop */
 .nav-toggle {
   display: none;
