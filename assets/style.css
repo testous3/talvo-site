@@ -372,20 +372,15 @@ a {
 .store-badge {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   background: var(--ink);
   color: var(--bg);
-  padding: 0.8rem 1.4rem;
-  border-radius: 16px;
+  padding: 0.6rem 1.1rem;
+  border-radius: 14px;
   text-decoration: none;
   line-height: 1.15;
   transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
   box-shadow: 0 8px 20px rgba(24, 20, 15, 0.16);
-}
-
-.store-badge svg {
-  width: 26px;
-  height: 26px;
 }
 
 .store-badge:hover {
@@ -402,13 +397,13 @@ a {
 
 .store-badge small {
   display: block;
-  font-size: 0.78rem;
+  font-size: 0.68rem;
   font-weight: 500;
   opacity: 0.75;
 }
 
 .store-badge span {
-  font-size: 1.15rem;
+  font-size: 0.98rem;
   font-weight: 800;
 }
 
